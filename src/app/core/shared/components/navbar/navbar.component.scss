@@ -1,0 +1,27 @@
+.header-wrapper {
+  width: 100%;
+  z-index: 10;
+  position: fixed;
+  header {
+    @media (max-width: 639px) {
+      background: inherit;
+      padding-left: .75rem;
+      padding-right: .75rem;
+    }
+    @media (min-width: 1280px) {
+      padding-left: 5rem;
+      padding-right: 5rem;
+    }
+  }
+}
+/* Стилі, які застосовуються, коли хедер згортається */
+header.nav-up {
+  transform: translateY(-100%);
+  transition: transform 0.3s ease-out;
+}
+
+/* Стилі, які застосовуються, коли хедер розгортається */
+header.nav-down {
+  transform: translateY(0);
+  transition: transform 0.3s ease-out;
+}

@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "angular-eat-curious": {
+    "angular-eat-furious": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/angular-eat-curious",
+            "outputPath": "dist/angular-eat-furious",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -65,10 +65,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "angular-eat-curious:build:production"
+              "browserTarget": "angular-eat-furious:build:production"
             },
             "development": {
-              "browserTarget": "angular-eat-curious:build:development"
+              "browserTarget": "angular-eat-furious:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -76,7 +76,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-eat-curious:build"
+            "browserTarget": "angular-eat-furious:build"
           }
         },
         "test": {
