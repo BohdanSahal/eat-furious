@@ -2,11 +2,25 @@
 @tailwind components;
 @tailwind utilities;
 
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&family=Rubik+Mono+One&display=swap');
+
+@font-face {
+  font-family: 'Specify-Personal'; /* Ім'я шрифту, яке ви хочете використовувати */
+  src: url('./assets/fonts/specify-personal/Specify-PERSONAL-Normal-Black.ttf.woff') format('woff'); /* Шлях до вашого шрифту */
+  font-weight: normal; /* Вага шрифту (за необхідності) */
+  font-style: normal; /* Стиль шрифту (за необхідності) */
+}
 
 body {
   margin: 0;
   padding: 0;
+}
+
+.montserrat-black-900 {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 900;
+  font-style: normal;
 }
 
 .roboto-condensed-black-900 {
@@ -21,4 +35,46 @@ body {
   font-family: "Rubik Mono One", monospace;
   font-weight: 400;
   font-style: normal;
+}
+
+.primary-btn-anim {
+  position: relative; /* Потрібно для позиціонування псевдоелементу */
+  background-color: rgb(244, 114, 182);
+  padding: .75rem 1.5rem;
+  font-size: 20px;
+  text-transform: uppercase;
+  font-family: "Specify-Personal";
+  font-weight: 900;
+  border-radius: 4px;
+  color: rgb(2, 44, 34);
+  letter-spacing: -1px;
+  overflow: hidden; /* Потрібно для псевдоелемента ::after */
+}
+.primary-btn-anim {
+  position: relative;
+  overflow: hidden; /* Забезпечуємо обрізання тексту, який виходить за межі кнопки */
+}
+
+.primary-btn-anim a {
+  position: relative; /* Потрібно для правильної роботи псевдоелемента */
+}
+
+.primary-btn-anim span {
+  position: absolute;
+  top: 0;
+  left: 100%; /* Зміщуємо псевдоелемент за межі кнопки */
+  white-space: nowrap; /* Забезпечуємо вивід тексту в один рядок */
+  overflow: hidden;
+  opacity: 0; /* Початково текст прихований */
+}
+
+/* При наведенні змінюємо прозорість тексту на 1 і запускаємо анімацію */
+.primary-btn-anim:hover span {
+  opacity: 1;
+  animation: slideInFromRight 2s linear infinite;
+}
+
+@keyframes slideInFromRight {
+  0% { transform: translateX(100%); } /* Початкове положення - за межами кнопки */
+  100% { transform: translateX(-100%); } /* Кінцеве положення - всередині кнопки */
 }

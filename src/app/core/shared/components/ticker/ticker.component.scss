@@ -52,10 +52,11 @@
 
 .ticker__item span {
   font-size: 18px;
-  font-family: "Rubik Mono One", monospace;
-  font-weight: 400;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 900;
   margin-right: 70px;
   text-transform: uppercase;
+  color: rgb(2, 44, 34);
   &::after {
     content: "";
     position: absolute;

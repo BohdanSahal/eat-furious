@@ -1,0 +1,39 @@
+.logos-carousel {
+  width: 100%;
+  display: flex;
+  overflow: hidden;
+  padding-top: 8rem;
+}
+
+
+.cards {
+  display: flex;
+  flex-shrink: 0;
+  border-radius: 6px;
+  animation: ticker 8s linear infinite;
+  overflow: hidden;
+}
+
+.card-wrapper {
+  height: 200px;
+  transition: 0.4s;
+  margin: 0 30px;
+}
+
+.card {
+  width: 160px;
+  height: 160px;
+  object-fit: cover;
+  object-position: center;
+  transition: 0.4s;
+}
+
+.card:hover {
+  cursor: pointer;
+}
+
+
+@keyframes ticker {
+  0% { transform: translate3d(0%, 0, 0); } /* Початкове положення зправа */
+  100% { transform: translate3d(-100%, 0, 0); } /* Кінцеве положення зліва */
+}
