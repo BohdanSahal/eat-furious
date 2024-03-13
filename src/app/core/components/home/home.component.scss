@@ -32,8 +32,63 @@
   cursor: pointer;
 }
 
+.wave {
+
+
+  display: inline-block;
+  position: relative;
+  width: 100%;
+  vertical-align: middle;
+
+  svg {
+    display: inline-block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}
+
 
 @keyframes ticker {
-  0% { transform: translate3d(0%, 0, 0); } /* Початкове положення зправа */
-  100% { transform: translate3d(-100%, 0, 0); } /* Кінцеве положення зліва */
+  0% {
+    transform: translate3d(0%, 0, 0);
+  }
+
+  /* Початкове положення зправа */
+  100% {
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  /* Кінцеве положення зліва */
+}
+
+.products-grid {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  .row {
+    display: flex;
+    max-width: 1660px;
+    width: 100%;
+    margin-bottom: 32px;
+    .p-grid-item {
+      width: 520px;
+      margin: auto;
+      height: 500px;
+      overflow: hidden;
+      h2 {
+        font-size: 108px;
+        line-height: 1;
+      }
+      .absolute {
+        bottom: -40%;
+        left: calc(50% - 225px);
+        img {
+          width: 450px;
+        }
+      }
+    }
+  }
 }
